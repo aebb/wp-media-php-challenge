@@ -1,0 +1,14 @@
+title:
+  home: Homepage
+  admin: Admin
+  login: Login
+  sitemap: Sitemap
+
+login:
+  login: login
+  username: username
+  password: password
+
+admin:
+  no_crawl: No crawls yet!
+  new_crawl: Crawl

@@ -1,0 +1,12 @@
+# https://symfony.com/doc/current/messenger.html#transport-configuration
+framework:
+  messenger:
+    transports:
+      async:
+        dsn: "%env(MESSENGER_TRANSPORT_DSN)%"
+        options:
+          stream: crawl-stream
+          group: crawl-group
+          delete_after_ack: true
+    routing:
+      'App\Message\CrawlMessage': async
