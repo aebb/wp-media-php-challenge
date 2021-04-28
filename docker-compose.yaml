@@ -6,10 +6,15 @@ services:
     restart: always
     working_dir: /app
     environment:
-      CONTAINER_NAME: http://task-app
+      CONTAINER_NAME: http://task-app/
       WEB_DOCUMENT_ROOT: /app/public
       WEB_DOCUMENT_INDEX: index.php
       XDEBUG_REMOTE_AUTOSTART: 1
+      XDEBUG_MODE: debug
+      XDEBUG_CLIENT_HOST: '172.17.0.1'
+      XDEBUG_CLIENT_PORT: 9000
+      XDEBUG_DISCOVER_CLIENT_HOST: 0
+      XDEBUG_START_WITH_REQUEST: 'yes'
     ports:
       - "8080:80"
     volumes:
